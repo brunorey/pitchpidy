@@ -1072,6 +1072,9 @@ function open_overlay_fixed(oid) {
 		if(width+sizes[1]+x_o>w_w)
 			width = w_w - sizes[1] - x_o;
 	}
+	// width fix: Agregado por bruno
+	width = w_w - 100;
+	width = width + "px";
 
 	var hx = 1, wx =1;
 	if(width>height) 
