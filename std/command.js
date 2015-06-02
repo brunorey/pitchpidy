@@ -553,7 +553,7 @@ function update_current_song(info) {
 	if(title==null||title=="") {
 		title = info["file"];
 		if(title)
-			title = title.substring(title.lastIndexOf(DIR_SEPARATOR)+1);
+			title = decodeURI(title.substring(title.lastIndexOf(DIR_SEPARATOR)+1));
 	}
 	t.appendChild(create_txt(title));
 

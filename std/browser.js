@@ -317,7 +317,7 @@ function browser_fill_entry(entry, resp, strip, parent_dir) {
 				}
 				else {
 					name = name["file"];
-					strip_name = name.substring(name.lastIndexOf(DIR_SEPARATOR)+1);
+					strip_name = decodeURI(name.substring(name.lastIndexOf(DIR_SEPARATOR)+1));
 				}
 				rtype = "file";
 			}
@@ -330,7 +330,7 @@ function browser_fill_entry(entry, resp, strip, parent_dir) {
 				strip_name = name.substring(strip);
 			}
 			else if(type=="file"&&name.lastIndexOf(DIR_SEPARATOR)>=0) {
-				strip_name = name.substring(name.lastIndexOf(DIR_SEPARATOR)+1);
+				strip_name = decodeURI(name.substring(name.lastIndexOf(DIR_SEPARATOR)+1));
 			}
 
 			var l = create_node("li", null, strip_name);
@@ -567,8 +567,10 @@ function browser_open_single_item(container, elem, doubleclick) {
 			}
 		}
 		else {
-			// else do as usual...
-			send_command("add=" + encodeURIComponent(diritem), browser_add_cb, LANG.WAIT_ADDING);
+			// else do as usual: if elem is file, add it...
+			if(elem.getAttribute("dirtype")=="file") {
+				send_command("add=" + encodeURIComponent(diritem), browser_add_cb, LANG.WAIT_ADDING);
+			}
 		}
 	}
 }
