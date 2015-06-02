@@ -1,0 +1,3 @@
+<?xml version="1.0"?>
+<root>
+<mpd_host>127.0.0.1</mpd_host><mpd_port>6600</mpd_port><mpd_pass></mpd_pass><login_pass></login_pass><ro_pass></ro_pass><update_delay>1</update_delay><metadata_disable></metadata_disable><theme>default</theme><stop_button></stop_button><shout_url></shout_url><pagination>0</pagination><lang>en</lang><aws_keyid></aws_keyid><aws_secret></aws_secret><plentry><Title>yes</Title><Album>yes</Album><Artist>yes</Artist><Track></Track><Name></Name><Genre></Genre><Date></Date><Composer></Composer><Performer></Performer><Comment></Comment><Disc></Disc></plentry></root>
