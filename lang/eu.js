@@ -52,7 +52,7 @@ LANG.DATE		="Data";
 LANG.PL_SAVE_AS 	="Gorde zerrenda: ";
 LANG.PL_SAVING		="Zerrenda gordetzen";
 
-LANG.CONSUME	="Consume";
+LANG.CONSUME	="Kontsumitzen";
 LANG.REPEAT		="Errepikatu";
 LANG.RANDOM		="Ausazkoa";
 LANG.XFADE		="X-Fade: ";
