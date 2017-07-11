@@ -143,8 +143,7 @@ class Net_MPD_Playback extends Net_MPD_Common
     /**
      * Sets 'consume' mode on/off
      * @access public
-     * @param $on bool true or false, for consume or not (respectively),
-     optional
+     * @param $on bool true or false, for consume or not (respectively), optional
      * @return true
      */
     public function consume($on = false)
@@ -157,8 +156,7 @@ class Net_MPD_Playback extends Net_MPD_Common
     /**
      * Sets 'repeat' mode on/off
      * @access public
-     * @param $on bool true or false, for repeat or not (respectively),
-     optional
+     * @param $on bool true or false, for repeat or not (respectively), optional
      * @return true
      */
     public function repeat($on = false)
