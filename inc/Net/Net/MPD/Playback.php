@@ -141,7 +141,21 @@ class Net_MPD_Playback extends Net_MPD_Common
 
 
     /**
-     * Sets 'random' mode on/off
+     * Sets 'consume' mode on/off
+     * @access public
+     * @param $on bool true or false, for consume or not (respectively),
+     optional
+     * @return true
+     */
+    public function consume($on = false)
+    {
+	$this->runCommand('consume', (int)$on);
+	return true;
+    }
+
+
+    /**
+     * Sets 'repeat' mode on/off
      * @access public
      * @param $on bool true or false, for repeat or not (respectively),
      optional

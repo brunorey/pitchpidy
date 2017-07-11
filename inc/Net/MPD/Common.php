@@ -328,6 +328,7 @@ class Net_MPD_Common
                     //Now for a status call:
                     case 'volume':
                     case 'repeat':
+                    case 'consume':
                     case 'random':
                     case 'playlistlength':
                     case 'xfade':

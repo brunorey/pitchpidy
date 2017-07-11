@@ -510,6 +510,20 @@
 		$json = array("result" => $res);
 
 	}
+	else if(isset($_GET['consume'])&&$rw) {
+		$res = "failure";
+		try {
+			$play = get_playback(); 
+			$val = $_GET['consume']=="1";
+			if($play->consume($val)) {
+				$res = $val?"1":"0";
+			}
+			$play->disconnect();
+		}
+		catch(PEAR_Exception $e) {
+		}
+		$json = array("result" => $res);
+	}
 	else if(isset($_GET['repeat'])&&$rw) {
 		$res = "failure";
 		try {

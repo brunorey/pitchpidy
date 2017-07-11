@@ -47,6 +47,7 @@ playing.image = "";	//
 playing.asin = "";	
 playing.random = 0;	// random on/off
 playing.repeat = 0; 	// repeat on/off
+playing.consume = 0; 	// consume on/off
 playing.xfade = 0;	// crossfade seconds
 playing.update = false; // dbupdate
 playing.show_node = null; // node that is supposed to have playing status
@@ -359,6 +360,7 @@ function current_status_handler(info, has_plchanges) {
 		playing.volume = volume;
 	}
 
+	playing.consume = info.consume;
 	playing.repeat = info.repeat;
 	playing.random = info.random;
 	playing.xfade = info.xfade;
@@ -816,6 +818,7 @@ function open_settings_cb(response) {
 		return span;
 	}
 
+	add_entry("consume_toggle", playing.consume, LANG.CONSUME);
 	add_entry("repeat_toggle", playing.repeat, LANG.REPEAT);
 	add_entry("random_toggle", playing.random, LANG.RANDOM);
 	var xfade = add_entry("xfade_entry", playing.xfade, LANG.XFADE, true);
@@ -862,6 +865,10 @@ function settings_click_handler(e) {
 				toggle_repeat(n);
 				break;
 			}
+			else if(n.id=="consume_toggle") {
+				toggle_consume(e);
+				break;
+			}
 			else if(n.id=="random_toggle") {
 				toggle_random(e);
 				break;
@@ -877,6 +884,9 @@ function settings_click_handler(e) {
 	stop_event(e);
 }
 
+function toggle_consume(e) {
+	send_command("consume=" + (parseInt(playing.consume)==0?1:0), toggle_consume_cb);
+}
 function toggle_repeat(e) {
 	send_command("repeat=" + (parseInt(playing.repeat)==0?1:0), toggle_repeat_cb);
 }
@@ -913,6 +923,12 @@ function xfade_adjust(node, ev) {
 	}
 }
 
+function toggle_consume_cb(response) {
+	var n = document.getElementById("consume_toggle_img");
+	var img = create_settings_status_image(response);
+	replace_node(img, n);
+	img.id = "consume_toggle_img";
+}
 function toggle_repeat_cb(response) {
 	var n = document.getElementById("repeat_toggle_img");
 	var img = create_settings_status_image(response);

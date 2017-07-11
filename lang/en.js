@@ -57,6 +57,7 @@ LANG.DATE		="Date";
 LANG.PL_SAVE_AS 	="Save playlist as: ";
 LANG.PL_SAVING		="Saving playlist";
 
+LANG.CONSUME		="Consume";
 LANG.REPEAT		="Repeat";
 LANG.RANDOM		="Random";
 LANG.XFADE		="X-Fade: ";

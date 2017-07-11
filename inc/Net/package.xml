@@ -62,6 +62,7 @@
   <provides type="function" name="Net_MPD_Playback::playId" />
   <provides type="function" name="Net_MPD_Playback::random" />
   <provides type="function" name="Net_MPD_Playback::repeat" />
+  <provides type="function" name="Net_MPD_Playback::consume" />
   <provides type="function" name="Net_MPD_Playback::seek" />
   <provides type="function" name="Net_MPD_Playback::seekId" />
   <provides type="function" name="Net_MPD_Playback::setVolume" />
