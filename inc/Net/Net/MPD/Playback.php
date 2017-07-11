@@ -128,8 +128,7 @@ class Net_MPD_Playback extends Net_MPD_Common
     /**
      * Sets 'random' mode on/off
      *
-     * @param $on bool true or false, for random or not (respectively),
-     optional
+     * @param $on bool true or false, for random or not (respectively), optional
      * @return bool
      */
     public function random($on = false)
