@@ -52,6 +52,7 @@ LANG.DATE		="Date";
 LANG.PL_SAVE_AS 	="Enregistrer la playlist sous: ";
 LANG.PL_SAVING		="Enregistrement de la playlist";
 
+LANG.CONSUME	="Consommer";
 LANG.REPEAT		="Répéter";
 LANG.RANDOM		="Aléatoire";
 LANG.XFADE		="Crossfade: ";

@@ -51,6 +51,7 @@ LANG.DATE		="Datum";
 LANG.PL_SAVE_AS 	="Speichere Playlist als: ";
 LANG.PL_SAVING		="Speichere Playlist";
 
+LANG.CONSUME	="Verbrauchen";
 LANG.REPEAT		="Wiederholen";
 LANG.RANDOM		="Zufallswiedergabe";
 LANG.XFADE		="Überblenden: ";
